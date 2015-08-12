@@ -1,0 +1,40 @@
+{
+  "name": "postcss-mysource-path",
+  "version": "1.0.0",
+  "description": "PostCSS plugin for rewriting url() paths to `mysource_files`.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "postcss": "^4.1.16"
+  },
+  "devDependencies": {
+    "standard": "^5.0.2",
+    "tape": "^4.0.3"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshgillies/postcss-mysource-path.git"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "mysource_files",
+    "mysource",
+    "design",
+    "parse",
+    "file",
+    "squiz",
+    "matrix"
+  ],
+  "author": "Josh Gillies <npm@joshgilli.es> (http://joshgilli.es/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshgillies/postcss-mysource-path/issues"
+  },
+  "homepage": "https://github.com/joshgillies/postcss-mysource-path#readme"
+}
