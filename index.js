@@ -11,6 +11,11 @@ function mySourcePath () {
         var url = parseCssUrls(decl.value)[0]
 
         decl.value = rewriteUrl(decl.value, url)
+
+        result.messages.push({
+          plugin: 'postcss-mysource-path',
+          path: url
+        })
       }
     })
   }
