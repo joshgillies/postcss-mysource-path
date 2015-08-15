@@ -1,3 +1,7 @@
 body {
   background: url('mysource_files/image.jpg');
 }
+
+.embeded {
+  background: url('data:image/png;base64,asdf');
+}

@@ -10,12 +10,16 @@ function mySourcePath () {
       if (decl.value && decl.value.indexOf('url(') > -1) {
         var url = parseCssUrls(decl.value)[0]
 
-        decl.value = rewriteUrl(decl.value, url)
+        // data URIs are undefined
+        if (url) {
+          console.log('module', url, decl.value)
+          decl.value = rewriteUrl(decl.value, url)
 
-        result.messages.push({
-          plugin: 'postcss-mysource-path',
-          path: url
-        })
+          result.messages.push({
+            plugin: 'postcss-mysource-path',
+            path: url
+          })
+        }
       }
     })
   }
