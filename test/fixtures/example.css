@@ -1,5 +1,9 @@
-body {
+.relative {
   background: url('test/image.jpg');
+}
+
+.absolute {
+  background: url('https://www.squiz.net/__template/45/logo.svg');
 }
 
 .embeded {

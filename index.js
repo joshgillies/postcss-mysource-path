@@ -11,8 +11,7 @@ function mySourcePath () {
         var url = parseCssUrls(decl.value)[0]
 
         // data URIs are undefined
-        if (url) {
-          console.log('module', url, decl.value)
+        if (url && !isAbsoluteUrl(url)) {
           decl.value = rewriteUrl(decl.value, url)
 
           result.messages.push({
@@ -27,4 +26,8 @@ function mySourcePath () {
 
 function rewriteUrl (value, url) {
   return value.replace(url, 'mysource_files/' + path.basename(url))
+}
+
+function isAbsoluteUrl (url) {
+  return /^[a-z]+:\/\//.test(url)
 }
