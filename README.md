@@ -12,7 +12,7 @@
 
 ## Install
 
-`npm install postcss-mysource-path --save`
+`npm install postcss-mysource-path`
 
 ## Example
 

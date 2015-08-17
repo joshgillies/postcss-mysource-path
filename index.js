@@ -5,7 +5,7 @@ var parseCssUrls = require('css-url-parser')
 module.exports = postcss.plugin('postcss-mysource-path', mySourcePath)
 
 function mySourcePath () {
-  return function (styles, result) {
+  return function transformer (styles, result) {
     styles.eachDecl(function processDecl (decl) {
       var url
 
