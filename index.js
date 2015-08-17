@@ -6,19 +6,21 @@ module.exports = postcss.plugin('postcss-mysource-path', mySourcePath)
 
 function mySourcePath () {
   return function (styles, result) {
-    styles.eachDecl(function (decl) {
-      if (decl.value && decl.value.indexOf('url(') > -1) {
-        var url = parseCssUrls(decl.value)[0]
+    styles.eachDecl(function processDecl (decl) {
+      var url
 
-        // data URIs are undefined
-        if (url && !isAbsoluteUrl(url)) {
-          decl.value = rewriteUrl(decl.value, url)
+      if (
+        decl.value &&
+        decl.value.indexOf('url(') > -1 &&
+        (url = parseCssUrls(decl.value)[0]) &&
+        !isAbsoluteUrl(url)
+      ) {
+        decl.value = rewriteUrl(decl.value, url)
 
-          result.messages.push({
-            plugin: 'postcss-mysource-path',
-            path: url
-          })
-        }
+        result.messages.push({
+          plugin: 'postcss-mysource-path',
+          path: url
+        })
       }
     })
   }
