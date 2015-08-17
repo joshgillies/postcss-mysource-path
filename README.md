@@ -1,4 +1,7 @@
-# postcss-mysource-path [![Build Status][travis-image]][travis-link] [![js-standard-style][standard-image]][standard-link]
+# postcss-mysource-path
+
+[![Build Status][travis-image]][travis-link]
+[![js-standard-style][standard-image]][standard-link]
 
 [travis-image]: https://travis-ci.org/joshgillies/postcss-mysource-path.svg?branch=master
 [travis-link]: https://travis-ci.org/joshgillies/postcss-mysource-path
@@ -6,3 +9,15 @@
 [standard-link]: https://github.com/feross/standard
 
 > PostCSS plugin for rewriting url() paths to `mysource_files`.
+
+## Install
+
+`npm install postcss-mysource-path --save`
+
+## Example
+
+## API
+
+## License
+
+MIT
