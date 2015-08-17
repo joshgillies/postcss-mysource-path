@@ -1,9 +1,23 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('mysource_files/webfont.eot');
+  src: url('mysource_files/webfont.eot?#iefix') format('embedded-opentype'),
+       url('mysource_files/webfont.woff2') format('woff2'),
+       url('mysource_files/webfont.woff') format('woff'),
+       url('mysource_files/webfont.ttf') format('truetype'),
+       url('mysource_files/webfont.svg#svgFontName') format('svg');
+}
+
 .relative {
   background: url('mysource_files/image.jpg');
 }
 
 .absolute {
-  background: url('https://www.squiz.net/__template/45/logo.svg');
+  background: url('//www.squiz.net/__template/45/logo.svg');
+}
+
+.absolute-w-proto {
+  background: url('http://www.squiz.net/__template/45/logo.svg');
 }
 
 .embedded {

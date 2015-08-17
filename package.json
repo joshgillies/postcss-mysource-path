@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "css-url-parser": "^0.1.0",
+    "escape-regex-string": "^1.0.3",
     "postcss": "^4.1.16"
   },
   "devDependencies": {
