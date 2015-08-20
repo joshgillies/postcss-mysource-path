@@ -16,6 +16,26 @@
 
 ## Example
 
+```js
+var fs = require('fs')
+var postcss = require('postcss')
+var mySourcePath = require('postcss-mysource-path')
+
+var source = fs.readFileSync('input.css', 'utf8')
+
+var output = postcss([mySourcePath()])
+  .process(source, {
+    from: 'src/stylesheet/index.css',
+    to: 'dist/index.css'
+  })
+  .then(function (result) {
+    result.messages.forEach(function (message) {
+      console.log(message.path)
+    })
+  })
+  .css
+```
+
 ## API
 
 ## License
